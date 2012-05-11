@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Uniqcolor1</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrapper">
+   <div id="header">
+            <div id="logo"></div>
+            <div id="login">
+             <%unless user_signed_in?%>
+			<%= form_for @user, :url => session_path(@user),:html => {:id => "register_user" }  do |f| %>
+  					<div id="email_pswd" style="float:right;" >
+		  				<div id="email_user" style="float:left;margin-right: 5px;"> <%= f.text_field :email,:size =>18 , :class => "user_all_email" , :id => "user_email_al" %></div>
+		  				<div id="pswd_user" style="float:left;margin-right: 5px;"> <%= f.password_field :password,:size =>18, :class => "usr_pswd_al" %></div>
+		  				<%= f.submit "Login" ,:id => "login_btn" %>
+		  				<div style="clear:both;"></div>
+		  				<div id="forgot_pass" >
+  	  	  				
+  		 	 			<%= link_to "Forgot your password ?", "/users/password/new" %> 
+	        		</div>
+  	       		 	</div>
+   	        		
+		   				<% end %>
+	 	 <%else%>
+	 	  <div>
+                <div id="home_welcome"> Welcome To User Home Page <b><%= current_user.profile_name%></b> </div>
+                   <div id="home_logout"> <%=link_to "Log Out",logout_path, :id  => "user_logout" %></div>
+                  </div>
+                 <%end%>
+                 
+	    </div>
+   </div>
+   
+   <div id="bodymain">
+      <% if flash[:notice] %>
+          <div id="flash_notice"> 
+             <div><%=flash[:notice]%></div>
+				 </div>
+                <% elsif flash[:alert] %>
+		  <div id="flash_alert"> 	
+	         <div id="flash_notice_alert"><%=flash[:alert]%> </div>
+	    </div>
+	    <%end%>
+        <%= yield %>
+   </div>
+   <div id ="footer">
+   
+   </div>
+  </div>
+</body>
+</html>

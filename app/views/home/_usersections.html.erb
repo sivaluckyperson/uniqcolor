@@ -1,0 +1,16 @@
+<div id="extra_div1" style="">
+	<div style="width:475px;">
+		<b> Sections </b>
+		<%current_user.comments.each do |comment|%>
+			<div id="sections_display">
+
+			 <div><b>Title :</b><b><%= comment.title %></b></div>
+			  <div><b>Description :</b><br/>
+			<%= comment.description %></div>
+			</div>
+		<%end%>
+	 </div>
+	 <div id="extra_div2">
+	 </div>
+ </div>
+ 	

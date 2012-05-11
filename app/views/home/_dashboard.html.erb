@@ -1,0 +1,26 @@
+<div id="mid_left_data">
+   <%= render "userdetails"%>
+
+   <div style="clear:both;"></div>
+
+   <div>
+     <%= link_to 'Manage Profile Details' ,edit_path %>
+   </div>
+
+   <div>
+     <%= link_to 'Show Profile Details' ,home_userdetails_path %>
+  </div>
+
+   <%= render "usersections" %>
+
+  <div>
+    <div id="sections"></div>
+    <%= link_to 'add a new section' , new_comment_path, :remote => true%>
+  </div>
+<h3>Invite Friend</h3>
+<%=form_tag :action=>'friend_invite' do %>
+Email:-<%=text_field_tag :email%><br/>
+Color:-<%=text_field_tag :color%><br/>
+<%=submit_tag "Invite"%>
+<%end%>
+</div>

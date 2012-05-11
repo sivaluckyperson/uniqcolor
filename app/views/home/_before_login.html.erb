@@ -1,0 +1,64 @@
+ <div id="mid"> 
+            <div id="midleft">
+                    
+                    <div id="slogon_top">Because you are Unique...</div>
+                    <div id="slogon_text">What color you like?</div>
+                    <div id="slogonleft">
+                        <div id="slogon_textsm">Search your color NOW!</div>
+					<div id="colorpickerHolder" >
+
+                    </div>
+                    </div>
+                    <div id="offer">
+
+                    </div>
+             </div>
+              
+              
+                <div id="midright">
+                    <div id="signupbox">
+                    <div style="margin-left:10px;">            
+<%= form_for @user,:url => "/sign_up",:html => {:id => "new_user", :name => "new_user",:onsubmit => "return checkEmail()",:novalidate=>true} do |f| %>
+  
+  <div><span class="labels"><%= f.label :name %></span>
+  <span class="controls"><%= f.text_field :name,:size => 20 %></span></div><br/>
+   <div><span class="labels"><%= f.label :user_color %></span>
+  <span class="controls"><%= f.text_field :user_color,:size => 20 %></span></div><br/>
+  <div><span class="labels"><%= f.label :email %></span>
+  <span class="controls"><%= f.email_field :email,:size => 20 %></span></div><br/>
+
+  <div><span class="labels"><%= f.label :password %></span>
+  <span class="controls"><%= f.password_field :password ,:size => 20 %></span></div>
+
+  <div><span class="labels"><%= f.label :password_confirm %></span>
+  <span class="controls"><%= f.password_field :password_confirmation,:size => 20 %></span></div>
+
+  <div><span class="labels"></span>
+   <span class="controls"><%= f.submit "Sign up", :id => "signup_btn"%></span></div>
+               
+              
+ <%end%> 
+  </div>
+          </div>      
+     </div>          
+</div>
+<div id="colorpalette">
+<%@latest_colors.each do |color|%>
+<div style="float:left; margin-left: 10px;" class="color_detail">
+<span>#<%=color.user_color%></span><br/>
+<div title="<%= color.name %>" style="background:#<%= color.user_color %>;height:50px;width:50px;border:1px solid #000;"></div>
+</div>
+<%end%>
+</div>  
+                         
+<script type="text/javascript">
+           
+        $(document).ready(function(){
+        
+
+$('.colorpicker_color').mousemove(function(){
+    $("#user_user_color").val($(".colorpicker_hex input").val());
+});
+         });
+</script>             
+              

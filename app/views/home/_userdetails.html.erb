@@ -1,0 +1,12 @@
+<div id="left_data">
+           <div id="avatar_left">
+             <%= image_tag current_user.avatar.url(:medium) %>
+           </div>
+	  <div id="avatar_right">
+		 <div><span> User Name:</span> <span><%= current_user.name %></span></div>
+		<div><span> Profile Name:</span> <span><%= current_user.profile_name %></span></div>
+		 <div><span> User Color:</span> <span><%= current_user.user_color %></span><div style="BACKGROUND:#<%= current_user.user_color %>;height:50px;width:50px;border:1px solid #393939;"></div></div>
+		 <div><span> User Email:</span> <span><%= current_user.email %></span></div>
+		 <div><span> User Location:</span> <span><%= current_user.user_location %></span></div>
+	   </div>
+ </div>

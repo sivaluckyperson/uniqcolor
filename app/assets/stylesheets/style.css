@@ -1,0 +1,307 @@
+body , p
+{
+  font-family: arial;
+  font-size: 12px;
+  color:#393939;
+  padding:0;
+  margin:0;
+  background-color:#4b5353;
+}
+
+#wrapper
+{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:5px;
+  padding:0px;
+  width:1000px;
+  
+}
+/* This is header */
+#header
+{
+ width:1000px;
+ min-height:87px;
+ background-color:white;
+ background-image: url(header-bg.png);
+}
+#logo
+{
+  float:left;
+  width:214px;
+  height:64px;
+  background-image: url(logo.png);
+  background-repeat: no-repeat;
+  padding-right:10px;
+  margin-left:10px;
+  margin-top:4px;
+}
+
+#login
+{
+ float:left;
+ width:765px;
+ height:64px;
+}
+#loginform , #forgot
+{
+ float:right;
+ width:auto;
+ padding-right:3px;
+}
+
+#forgot
+{
+  width: 760px;
+  text-align:right;
+  color:#000;
+}
+
+#forgot a:link {color:#000;text-decoration: none; }
+#forgot a:hover {color:#000;text-decoration: underline; }
+#forgot a:visited {color:#000;text-decoration: none; }
+
+#loginid
+{
+float:left;
+padding-top: 8px;
+}
+
+#loginpass
+{
+float:left;
+padding-top: 8px;
+}
+
+#loginbtn
+{
+float:left;
+padding-top: 8px;
+}
+.txtbox , #colorpic
+{
+ color:white;
+ background-color: #7C7C7C;
+ border:1px solid #202020;
+ height:23px;
+ margin-right:3px;
+ padding-left:2px;
+}
+
+#colorpic
+{
+  background-color:#fff;
+  margin-left:10px;
+}
+
+#colorpickerHolder
+{
+ float:left;
+ widht:auto;
+ margin-top:5px;
+}
+
+/* Mid section of page */
+#bodymain
+{
+
+ margin:auto;
+ min-height: 430px;
+ width: 1000px;
+ background-color:white;
+}
+
+#mid
+{
+ width:100%;
+ padding-bottom:5px;
+}
+
+#midleft
+{
+  float:left;
+  width:575px;
+  position:relative;
+  padding-left:10px;
+  padding-top:5px;
+  min-height:300px;
+}
+#midright
+{
+  float:left;
+  width:390px;
+  position:relative;
+  min-height:325px;
+}
+
+#slogon_top
+{
+    color: #0e4c85;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    left: 0;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    width: 550px;
+}
+#slogon_bigtext
+{
+  float:left;
+  width: 172px;
+  height:60px;
+}
+#slogon_text {
+  float:left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:24px;
+  color:#515657;
+  line-height:90px;
+  padding-top:5px;
+  height:60px;
+}
+
+#slogon_textsm
+{
+  float:left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:16px;
+  color:#515657;
+}
+
+#slogonleft
+{
+  float:left;
+  width:385px;
+  height:200px;
+}
+#offer
+{
+  float:left;
+  width:167px;
+  height:171px;
+  background-image: url(register.png);
+  background-repeat: no-repeat;
+}
+
+#colorpicker
+{
+ float:left;
+ margin-left:5px;
+}
+
+#colorpalette
+{
+  float:left;
+  height:100px;
+  width:99.3%;
+  padding-left:6px;
+}
+
+.colorprofile
+{
+  float: left;
+  height:115px;
+  width:62px;
+}
+
+.colorcode
+{
+  float: left;
+  min-height:25px;
+  width:60px;
+  line-height: 25px;
+}
+
+.selectedcolor
+{
+ float:left;
+ width:60px;
+ height:58px;
+}
+
+.procolor
+{
+  float:left;
+  width:55px;
+  height:55px;
+  border:1px solid #000;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+.colorid
+{
+ float:left;
+ width:60px;
+ height:30px;
+}
+
+#signupbox
+{
+ position: absolute;
+ top:-25px;
+ left:0;
+ background-image: url(signup_box.png);
+ background-repeat: no-repeat;
+ width:407px;
+ height:341px;
+}
+
+.signupform{
+  margin-top:40px;
+  margin-left: 45px;
+}
+
+
+.labels{
+ float:left;
+ width:138px;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size:16px;
+ text-align: right;
+ line-height:23px;
+ height:35px;
+}
+
+.controls{
+float:left;
+height:35px;
+width:180px;
+}
+
+#signupbtn
+{
+  float:left;
+  width: 210px;
+  margin-left:139px;
+}
+
+
+.clear
+{
+ clear : both;
+}
+
+/* footer css */
+#footer
+{
+ margin:auto;
+ height:155px;
+ width:1000px;
+ background-image: url(footer-bg.png);
+}
+
+#new_user{
+ margin-top:35px;
+ }
+ #register_user{
+  margin-top:15px;
+  margin-right: 15px;ss
+  }
+ #flash_notice{
+  font-size: 15px;
+  margin-left: 50px;
+  }

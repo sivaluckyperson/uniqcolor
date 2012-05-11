@@ -1,0 +1,17 @@
+<%= form_for @user, :url => {:controller=>'home',:action=>'upload_image'} ,:html => { :multipart => true,:method=> 'post' } do |form| %>
+   
+  <div><%= form.label :name %><br />
+  <%= form.text_field :name %></div>
+  
+  <div><%= form.label :profile_name %><br />
+  <%= form.text_field :profile_name %></div>
+  
+  <div><%= form.label :user_color %><br />
+  <%= form.text_field :user_color %></div>
+   
+   <div><%= form.label :user_location %><br />
+  <%= form.text_field :user_location %></div>
+  
+  <%= form.file_field :avatar %>
+  <%= form.submit "Upload file" %>
+<% end %>
